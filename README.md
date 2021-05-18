@@ -123,8 +123,8 @@ Acum să trecem la muncă.
 1. Deschide `README.md` în VS Code. O să verzi sursa textului în format Markdown. E chiar simpatic,
    dar dacă vrei să-l vezi ca și pe GitHub, apasă `Preview` din bara de sus. Acum, după ce ai
    completat un task, ~~✂️ îl tai de aici~~.
-2. Completează modelul utilizatorului cu: city, country, about, birthday (date). Completează rutele
-   pentru users cu toate metodele CRUD:
+2. Users. Completează modelul utilizatorului cu: city, country, about, birthday (date). Completează
+   rutele pentru users cu toate metodele CRUD:
    - întoarce toți utilizatorii
    - adaugă un utilizator
    - întoarce un singur utilizator
@@ -132,7 +132,7 @@ Acum să trecem la muncă.
    - suprascrie un utilizator
    - șterge un utilizator
      > Pentru a identifica utilizatorul, folosește adresa de email
-3. Completează rutele pentru filme:
+3. Movies. Completează rutele pentru filme:
    - întoarce un singur film - mai întâi verifici dacă filmul există în BD, dacă nu, îl descarci de
      pe TMDB și-l salvezi în BD, apoi îl returnezi. Acest pas intermediar, va popula BD cu filmele
      accesate
@@ -140,6 +140,16 @@ Acum să trecem la muncă.
      un cache pentru filmele cu care interacționează utilizatorii
    - search - interfața de comunicare cu TMDB, trimitem query către api-ul de la TMDB și întoarcem
      datele către client (un proxy). Nu salvăm nimic în BD.
+4. Favorite movies. Adaugă un model nou, prin care să indici filmele favorite ale unui utilizator.
+   Acest model va conține ID-ul filmului, email-ul utilizatorului și data când a fost adăugat.
+   Adaugă rutele necesare pentru a adăuga/șterge un film în/din această listă, pentru a întoarce
+   toate filmele favorite ale unui utilizator (nu doar ID, ci și titlu, an, gen, etc..), pentru a
+   verifica dacă un film este în lista de favorite ale unui utilizator.
+5. Watch history. Istoricul ar trebui să fie asemănător cu filmele favorite, cu diferența că data
+   când a fost privit, să poată fi modificată manual.
+6. Favorite movie genres. O listă cu genurile favorite ale utilizatorului. Trebuie să fie
+   asemănătoare ca și funcționalitate cu filmele favorite, doar că aici vom pune doar genul
+   filmului. Ne vom folosi de aceste date mai târziu, când vom lucra la recomandări.
 
 ## După ce ai terminat sarcinile,
 
